@@ -3,8 +3,8 @@ $(document).ready(function() {
   });
   
   new TypeIt('#typeit', {
-     strings: ["Software Developer", "Ukulele Player"],
-     speed: 75,
+     strings: ["Software Developer", "Movie Critic"],
+     speed: 125,
      breakLines: false,
      autoStart: true,
      loop: true

@@ -6,6 +6,13 @@
     text-align:center;
     font-weight: 500;
     font-size: 2em;
-    font-family: 'Roboto Slab';
+    font-stretch: 200%;
+    font-family: 'VT323', monospace;
     line-height: 0.2em;
   }
+
+  .testcss {
+    color: blue;
+  }
+
+  
