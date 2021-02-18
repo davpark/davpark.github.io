@@ -1,0 +1,11 @@
+.typeit{
+    height: 1.75em;
+    color: #BBDEFB;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align:center;
+    font-weight: 500;
+    font-size: 2em;
+    font-family: 'Roboto Slab';
+    line-height: 0.2em;
+  }
