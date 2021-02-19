@@ -1,6 +1,6 @@
 .typeit{
     height: 1.75em;
-    color: #BBDEFB;
+    color: #000000;
     margin-bottom: 15px;
     width: 100%;
     text-align:center;
@@ -11,8 +11,14 @@
     line-height: 0.2em;
   }
 
-  .testcss {
-    color: blue;
+  .count-box {
+    font-family: 'VT323', monospace;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    outline-style:dashed;
+    outline-width:2px;
+    height:5rem;
+    width:5rem;
+    font-size:36px;
   }
-
-  
