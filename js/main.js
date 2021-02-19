@@ -19,6 +19,7 @@ var totalHealth = 5;
 var health = 5;
 // var userInput = document.getElementById("userInput").value;
 var rabbitHealth = 5;
+var ranAway = false;
 
 async function counter() {
 
@@ -48,8 +49,9 @@ async function rabbitFight() {
       }
       if (incremental === 6 && attacked === true && rabbitHealth > 0) {
          document.getElementById("rabbitFight").innerHTML = "Rabbit ran away";
+         ranAway = true;
       }
-      if (rabbitHealth < 1) {
+      if (rabbitHealth < 1 && ranAway === false) {
          document.getElementById("rabbitFight").innerHTML = "You killed the rabbit";
       }
 
