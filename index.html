@@ -10,8 +10,28 @@
 
 /* all this is technical debt */
 
-body {
-color: #333;
+button {
+	background-color: rgb(255, 255, 255);
+	border: none;
+	color: white;
+}
+
+input {
+	background: rgb(238, 238, 238);
+	padding:3px;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type="password"]{
+    color : transparent;
+    text-shadow : 0 0 0 #000;
+}
+input[type="password"]:focus{
+    outline : none;
 }
 
 .box {
@@ -58,9 +78,9 @@ text-align: center;
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
-					<div>Hello.</div>
+					<div id="welcome">Hello. What would you like to do?</div>
 					<!-- need to change this so no button and submit on pressing enter key -->
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="" /> <br />
+					<input style="margin: 2rem; width:20rem; text-align: center;" id="password" type="password" placeholder="" /> <br />
 					<button id="loginbutton" type="button">enter</button>
 					<p id="wrongPassword" style="display: none"></p>
 				</div>
@@ -68,16 +88,13 @@ text-align: center;
 		</div>
 	</div>
 
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.2.0/typeit.min.js"></script>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
+	<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 	<script type="text/javascript">
 	"use strict";
-
 
 	function loadPage(pwd) {
 
@@ -118,6 +135,19 @@ text-align: center;
 	$("#password").focus();
 
 	</script>
+
+	<script>
+
+  	new TypeIt('#welcome', {
+		speed: 125,
+		breakLines: false,
+		autoStart: true,
+		loop: false
+  	});
+	  
+	</script>
+
+
 
 </body>
 </html>
