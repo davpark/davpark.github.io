@@ -15,6 +15,7 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 var incremental = 1;
 var attacked = false;
+var totalHealth = 5;
 var health = 5;
 // var userInput = document.getElementById("userInput").value;
 var rabbitHealth = 5;
@@ -38,8 +39,8 @@ async function rabbitFight() {
    for (rabbitHealth === 5; ; ) {
       await timer(1000);
       if (incremental === 6 && attacked === false) {
-         document.getElementById("rabbitFight").innerHTML = "Rabbit attacked for 4 dmg";
          health = health - 4;
+         document.getElementById("rabbitFight").innerHTML = "Rabbit attacked for 4 dmg. Your current HP is " + health + "/" + totalHealth;
          console.log("you've been hit, hp is: ", health);
          if (health < 1) {
             document.getElementById("rabbitFight").innerHTML = "ur ded lole";
