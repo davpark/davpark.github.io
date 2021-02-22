@@ -17,7 +17,7 @@ var incremental = 1;
 var attacked = false;
 var totalHealth = 5;
 var health = 5;
-// var userInput = document.getElementById("userInput").value;
+var action = document.getElementById("performAction").value;
 var rabbitHealth = 5;
 var ranAway = false;
 
@@ -69,13 +69,12 @@ rabbitFight()
 //  });
 
 function playerAction() {
-   var action = document.getElementById("performAction").value;
    console.log(action);
-   if (action === 'heal' ) {
+   if (action === 'heal' && health > 0) {
       health = health + 3;
       console.log("you healed, your hp is now: ", health);
    }
-   if (action === 'attack') {
+   if (action === 'attack' && health > 0) {
       rabbitHealth = rabbitHealth - 3;
       console.log(rabbitHealth);
       attacked = true;
